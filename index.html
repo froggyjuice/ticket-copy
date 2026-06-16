@@ -1,538 +1,429 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>제37회 전북의대 관현악단 정기연주회 - 디지털 팜플렛</title>
-  
-  <!-- FontAwesome Icon -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
-  <!-- Google Fonts & Pretendard -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;500;700&family=Noto+Serif+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
-
-  <link rel="stylesheet" href="style.css?v=2.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HEXA 오케스트라 공연 정보, 단원 소개, 곡 소개, 연지홀 좌석 예매를 제공하는 관현악단 웹사이트입니다.">
+    <title>HEXA 오케스트라</title>
+    <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
-  <!-- PC 접속 시 주변 장식용 데코레이터 -->
-  <div class="desktop-bg-decorator">
-    <div class="bg-overlay"></div>
-    <div class="floating-notes">
-      <span class="note-1">𝄞</span>
-      <span class="note-2">♩</span>
-      <span class="note-3">♪</span>
-      <span class="note-4">♬</span>
-    </div>
-  </div>
-
-  <!-- 전체 반응형 프레임 컨테이너 (너비 430px 제한 해제) -->
-  <div class="app-container responsive-web">
-    <div class="phone-screen wide-canvas">
-      
-      <!-- 상단 헤더 (데스크톱 및 모바일 반응형) -->
-      <header class="main-header">
-        <div class="logo-area">
-          <span class="logo-text font-serif">JBNUMS ORCHESTRA</span>
-        </div>
-        
-        <!-- 데스크톱용 상단 네비게이션 메뉴 -->
-        <nav class="desktop-nav">
-          <button class="desktop-nav-item active" data-target="home">표지</button>
-          <button class="desktop-nav-item" data-target="greetings">인사말</button>
-          <button class="desktop-nav-item" data-target="program">프로그램</button>
-          <button class="desktop-nav-item" data-target="members">단원소개</button>
-          <button class="desktop-nav-item" data-target="sponsors">동문후원</button>
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="HEXA 오케스트라 홈">
+            <span class="brand-mark">H</span>
+            <span>
+                <strong>HEXA Orchestra</strong>
+                <small>연지홀 정기연주회</small>
+            </span>
+        </a>
+        <nav class="site-nav" aria-label="주요 메뉴">
+            <a href="#schedule">공연정보</a>
+            <a href="#members">단원소개</a>
+            <a href="#program">곡소개</a>
+            <a href="#account">내 티켓</a>
+            <a href="#admin">관리자</a>
+            <button class="nav-ticket" type="button" data-open-ticket>티켓 예매</button>
         </nav>
+    </header>
 
-        <div class="concert-number">37th</div>
-      </header>
-
-      <!-- 우측 고정 플로팅 북마크 인덱스 (모바일/태블릿용 책갈피 바이브) -->
-      <aside class="pdf-bookmarks">
-        <button class="bookmark-btn active" data-target="home">
-          <span class="bm-icon"><i class="fa-solid fa-house"></i></span>
-          <span class="bm-label">표지</span>
-        </button>
-        <button class="bookmark-btn" data-target="greetings">
-          <span class="bm-icon"><i class="fa-solid fa-envelope"></i></span>
-          <span class="bm-label">인사말</span>
-        </button>
-        <button class="bookmark-btn" data-target="program">
-          <span class="bm-icon"><i class="fa-solid fa-music"></i></span>
-          <span class="bm-label">프로그램</span>
-        </button>
-        <button class="bookmark-btn" data-target="members">
-          <span class="bm-icon"><i class="fa-solid fa-users-line"></i></span>
-          <span class="bm-label">단원소개</span>
-        </button>
-        <button class="bookmark-btn" data-target="sponsors">
-          <span class="bm-icon"><i class="fa-solid fa-hand-holding-heart"></i></span>
-          <span class="bm-label">동문후원</span>
-        </button>
-      </aside>
-
-      <!-- 스크롤 가능한 본문 컨테이너 -->
-      <main class="content-scroll-container">
-        
-        <!-- [HOME] Section (표지) -->
-        <section id="home" class="scroll-section active">
-          <div class="hero-visual">
-            <div class="gold-rim-circle"></div>
-            <div class="ornament-pattern"></div>
-            <div class="hero-title-wrap">
-              <div id="d-day-badge" class="d-day-badge font-serif">D-DAY</div>
-              <span class="sub-title-eng">The 37th Annual Concert</span>
-              <h1 class="main-title">정기연주회</h1>
-              <p class="orchestra-name">전북대학교 의과대학 관현악단</p>
+    <main>
+        <section id="home" class="hero-section" role="img" aria-label="오케스트라 공연장 무대 이미지">
+            <div class="hero-content">
+                <p class="eyebrow">HEXA Orchestra</p>
+                <h1>HEXA 오케스트라</h1>
+                <p class="hero-copy">연지홀에서 만나는 첫 번째 정기연주회. 공연 소개부터 좌석 예매까지 한 곳에서 확인할 수 있습니다.</p>
+                <div class="hero-dday">
+                    <span>공연까지</span>
+                    <strong id="hero-dday">D-Day</strong>
+                    <small id="hero-date">2026.06.19 금 19:30</small>
+                </div>
+                <div class="hero-actions">
+                    <button class="primary-button hero-button" type="button" data-open-ticket>티켓 예매</button>
+                    <a class="secondary-link" href="#schedule">공연 정보</a>
+                </div>
+                <dl class="hero-facts">
+                    <div>
+                        <dt>공연장</dt>
+                        <dd>연지홀</dd>
+                    </div>
+                    <div>
+                        <dt>좌석</dt>
+                        <dd>가 · 나 · 다 블록</dd>
+                    </div>
+                    <div>
+                        <dt>예매</dt>
+                        <dd>좌석 선택형</dd>
+                    </div>
+                </dl>
             </div>
-          </div>
-          
-          <div class="concert-meta-info">
-            <div class="meta-item">
-              <div class="meta-icon"><i class="fa-regular fa-calendar-check"></i></div>
-              <div class="meta-detail">
-                <span class="meta-label">DATE & TIME</span>
-                <span class="meta-val">2027.01.01 (FRI) 06:30 P.M.</span>
-              </div>
-            </div>
-            <div class="meta-item">
-              <div class="meta-icon"><i class="fa-solid fa-map-pin"></i></div>
-              <div class="meta-detail">
-                <span class="meta-label">VENUE</span>
-                <span class="meta-val">전북대학교 삼성문화회관 영산홀</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="cover-design-element">
-            <span class="scroll-down-notice"><i class="fa-solid fa-chevron-down animate-bounce"></i> 아래로 스크롤하여 팜플렛 감상하기</span>
-          </div>
         </section>
 
-
-        <!-- [GREETINGS] Section (인사말 - 반응형 대응) -->
-        <section id="greetings" class="scroll-section">
-          <div class="section-header">
-            <span class="section-tag font-serif">GREETINGS</span>
-            <h2 class="section-title">초대의 글</h2>
-            <div class="accent-line"></div>
-          </div>
-
-          <div class="greetings-responsive-layout">
-            <!-- 지도교수 인사말 -->
-            <div class="greeting-card">
-              <div class="card-inner-glow"></div>
-              <span class="role font-serif">지도교수</span>
-              <h3 class="name">이승옥 교수님</h3>
-              
-              <div class="message-container collapsed">
-                <p class="message-highlight">“음악은 잠시 멈출 수는 있어도 사라지지 않습니다.”</p>
-                <div class="message-full">
-                  <p>지난 2년간 이어진 의정사태로 인해 여러분은 연주회를 열 수 없었습니다. 그럼에도 불구하고 음악을 놓지 않고, 오늘 이 자리를 다시 만들어낸 여러분의 노력과 열정에 지도교수로서 깊은 존경을 보냅니다.</p>
-                  <p>악보를 읽고 서로의 소리를 경청하며 전체의 조화를 위해 자신의 역할을 다하는 과정은 훗날 환자를 대하는 의사의 모습과 닮아 있습니다. 정교함과 인내, 공감과 협업, 의학과 음악은 결국 같은 가치를 향해 나아갑니다.</p>
+        <section id="schedule" class="site-section">
+            <div class="section-title-row">
+                <div>
+                    <p class="section-kicker">Concert</p>
+                    <h2>공연 일정 및 정보</h2>
                 </div>
-              </div>
-              
-              <button class="accordion-toggle-btn">더 보기 <i class="fa-solid fa-chevron-down"></i></button>
+                <button class="outline-button" type="button" data-open-ticket>좌석 예매하기</button>
             </div>
 
-            <!-- 회장 인사말 -->
-            <div class="greeting-card">
-              <div class="card-inner-glow"></div>
-              <span class="role font-serif">51기 회장</span>
-              <h3 class="name">정민경 학우</h3>
-              
-              <div class="message-container collapsed">
-                <p class="message-highlight">“악보 위에는 보이지 않지만, 저희의 시간과 마음이 선율이 되었습니다.”</p>
-                <div class="message-full">
-                  <p>각자의 자리에서 쌓아온 연습과 기다림이 모여 비로소 무대 위의 음악이 됩니다. 여러 여건으로 인해 연주회를 이어가지 못했던 시기가 있었지만, 저희는 마음을 놓지 않고 준비를 이어왔습니다.</p>
-                  <p>오늘의 무대는 잠시 떨어져 있던 시간들이 다시 하나로 이어지는 순간이기도 합니다. 저희가 정성껏 준비한 음악이 여러분께 따뜻한 울림으로 전해지기를 바랍니다.</p>
-                </div>
-              </div>
-              
-              <button class="accordion-toggle-btn">더 보기 <i class="fa-solid fa-chevron-down"></i></button>
+            <div class="concert-detail-grid">
+                <article class="detail-panel dday-panel">
+                    <span>COUNTDOWN</span>
+                    <strong id="detail-dday">D-Day</strong>
+                    <p>공연 전까지 남은 시간을 확인하고 바로 예매할 수 있습니다.</p>
+                </article>
+                <article class="detail-panel">
+                    <span>일시</span>
+                    <h3>2026년 6월 19일 금요일 19:30</h3>
+                    <p>러닝타임 90분 예정 · 인터미션 포함</p>
+                </article>
+                <article class="detail-panel">
+                    <span>관람 안내</span>
+                    <h3>예매번호와 디지털 티켓 확인</h3>
+                    <p>입장 시 이름, 전화번호, 좌석 정보로 예매 내역을 확인합니다.</p>
+                </article>
             </div>
-          </div>
+
+            <div class="showcase-grid">
+                <article class="show-card primary-show">
+                    <span>정기연주회</span>
+                    <h3>제1회 HEXA 오케스트라 정기연주회</h3>
+                    <p>클래식 레퍼토리와 익숙한 영화음악을 함께 구성한 첫 무대입니다.</p>
+                </article>
+                <article class="show-card">
+                    <span>장소</span>
+                    <h3>연지홀</h3>
+                    <p>1층과 2층 좌석을 가 · 나 · 다 블록으로 나누어 선택할 수 있습니다.</p>
+                </article>
+                <article class="show-card">
+                    <span>예매 방식</span>
+                    <h3>무료 좌석 예매</h3>
+                    <p>원하는 블록을 먼저 고르고 확대된 좌석표에서 좌석을 선택합니다. 입장료는 무료입니다.</p>
+                </article>
+            </div>
         </section>
 
-
-        <!-- [PROGRAM] Section (연주 프로그램 - 반응형 대열 그리드) -->
-        <section id="program" class="scroll-section">
-          <div class="section-header">
-            <span class="section-tag font-serif">PROGRAM</span>
-            <h2 class="section-title">연주 프로그램</h2>
-            <div class="accent-line"></div>
-          </div>
-
-          <!-- 1부 -->
-          <div class="program-part">
-            <div class="part-indicator">
-              <span class="part-line"></span>
-              <span class="part-name font-serif">PART I</span>
-              <span class="part-line"></span>
+        <section id="members" class="site-section muted-section">
+            <div class="section-title-row">
+                <div>
+                    <p class="section-kicker">Members</p>
+                    <h2>단원 소개</h2>
+                </div>
             </div>
 
-            <div class="program-items-grid">
-              <!-- 곡 1 -->
-              <div class="program-item">
-                <div class="music-meta">
-                  <span class="composer font-serif">Franz von Suppé</span>
-                  <h4 class="title">Light Cavalry Overture</h4>
-                </div>
-                <button class="preview-btn" data-music-id="1">
-                  <i class="fa-solid fa-headphones"></i> <span>미리듣기</span>
-                </button>
-              </div>
-
-              <!-- 곡 2 -->
-              <div class="program-item">
-                <div class="music-meta">
-                  <span class="composer font-serif">Pyotr Ilyich Tchaikovsky</span>
-                  <h4 class="title">The Sleeping Beauty Suite, Op. 66a - V. Waltz</h4>
-                </div>
-                <button class="preview-btn" data-music-id="2">
-                  <i class="fa-solid fa-headphones"></i> <span>미리듣기</span>
-                </button>
-              </div>
-
-              <!-- 곡 3 -->
-              <div class="program-item">
-                <div class="music-meta">
-                  <span class="composer font-serif">Giacomo Puccini</span>
-                  <h4 class="title">Manon Lescaut - Intermezzo</h4>
-                </div>
-                <button class="preview-btn" data-music-id="3">
-                  <i class="fa-solid fa-headphones"></i> <span>미리듣기</span>
-                </button>
-              </div>
-
-              <!-- 곡 4 -->
-              <div class="program-item">
-                <div class="music-meta">
-                  <span class="composer font-serif">Seonghwan Choi</span>
-                  <h4 class="title">아리랑 환상곡</h4>
-                </div>
-                <button class="preview-btn" data-music-id="4">
-                  <i class="fa-solid fa-headphones"></i> <span>미리듣기</span>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <!-- 2부 -->
-          <div class="program-part">
-            <div class="part-indicator">
-              <span class="part-line"></span>
-              <span class="part-name font-serif">PART II</span>
-              <span class="part-line"></span>
+            <div class="member-filters" aria-label="파트 필터">
+                <button class="member-filter is-active" type="button" data-member-filter="all">전체</button>
+                <button class="member-filter" type="button" data-member-filter="strings">현악</button>
+                <button class="member-filter" type="button" data-member-filter="woodwinds">목관</button>
+                <button class="member-filter" type="button" data-member-filter="brass">금관</button>
+                <button class="member-filter" type="button" data-member-filter="percussion">타악</button>
             </div>
 
-            <div class="program-items-grid single-col">
-              <!-- 곡 5 -->
-              <div class="program-item">
-                <div class="music-meta">
-                  <span class="composer font-serif">Antonin Dvořák</span>
-                  <h4 class="title">Symphony No.8 in G major, Op. 88</h4>
-                </div>
-                <button class="preview-btn" data-music-id="5">
-                  <i class="fa-solid fa-headphones"></i> <span>미리듣기</span>
-                </button>
-              </div>
+            <div class="member-grid">
+                <article class="member-card" data-member-part="strings">
+                    <span class="part-mark">Vn</span>
+                    <h3>현악 파트</h3>
+                    <p>바이올린, 비올라, 첼로가 곡의 중심 선율과 화성을 이끕니다.</p>
+                </article>
+                <article class="member-card" data-member-part="woodwinds">
+                    <span class="part-mark">Ww</span>
+                    <h3>목관 파트</h3>
+                    <p>플루트, 클라리넷, 오보에가 곡의 색채와 장면 전환을 만듭니다.</p>
+                </article>
+                <article class="member-card" data-member-part="brass">
+                    <span class="part-mark">Br</span>
+                    <h3>금관 파트</h3>
+                    <p>트럼펫, 호른, 트롬본이 무대의 에너지와 클라이맥스를 담당합니다.</p>
+                </article>
+                <article class="member-card" data-member-part="percussion">
+                    <span class="part-mark">Pc</span>
+                    <h3>타악 파트</h3>
+                    <p>리듬과 효과음을 더해 공연의 긴장감과 생동감을 완성합니다.</p>
+                </article>
             </div>
-          </div>
         </section>
 
-
-        <!-- [MEMBERS] Section (단원소개 - 와이드 대응) -->
-        <section id="members" class="scroll-section">
-          <div class="section-header">
-            <span class="section-tag font-serif">MEMBERS</span>
-            <h2 class="section-title">단원 소개</h2>
-            <div class="accent-line"></div>
-          </div>
-
-          <!-- 기수 선택 탭 버튼 -->
-          <div class="member-tabs">
-            <button class="tab-btn active" data-gen="g51">51기</button>
-            <button class="tab-btn" data-gen="g52">52기</button>
-            <button class="tab-btn" data-gen="g53">53기</button>
-            <button class="tab-btn" data-gen="g54-55">54&55기</button>
-          </div>
-
-          <!-- 기수별 명단 그리드 레이어 -->
-          <div class="member-layers-container">
-            
-            <!-- 51기 명단 -->
-            <div class="member-layer active" id="g51">
-              <div class="members-grid">
-                <div class="member-name-tag leadership"><span class="m-role">회장</span>정민경</div>
-                <div class="member-name-tag">고지현</div>
-                <div class="member-name-tag">공진영</div>
-                <div class="member-name-tag">김수연</div>
-                <div class="member-name-tag">박세준</div>
-                <div class="member-name-tag">박소연</div>
-                <div class="member-name-tag">송종빈</div>
-                <div class="member-name-tag">심효은</div>
-                <div class="member-name-tag">이승준</div>
-                <div class="member-name-tag">황혜정</div>
-              </div>
+        <section id="program" class="site-section">
+            <div class="section-title-row">
+                <div>
+                    <p class="section-kicker">Program</p>
+                    <h2>곡 소개</h2>
+                </div>
             </div>
 
-            <!-- 52기 명단 -->
-            <div class="member-layer" id="g52">
-              <div class="members-grid">
-                <div class="member-name-tag">강승훈</div>
-                <div class="member-name-tag">고은찬</div>
-                <div class="member-name-tag">문성하</div>
-                <div class="member-name-tag">박준서</div>
-                <div class="member-name-tag">이지훈</div>
-                <div class="member-name-tag">주은서</div>
-                <div class="member-name-tag">황준서</div>
-              </div>
+            <div class="program-list" aria-label="디지털 팜플릿">
+                <article class="program-item is-open">
+                    <button class="program-trigger" type="button" aria-expanded="true">
+                        <span>01</span>
+                        <strong>오프닝 앙상블</strong>
+                    </button>
+                    <div class="program-panel">
+                        <p>공연의 분위기를 열어 주는 짧고 밝은 관현악 편성의 곡입니다. 처음 듣는 관객도 악기군의 입장을 자연스럽게 느낄 수 있도록 구성합니다.</p>
+                        <a href="#members">관련 파트 보기</a>
+                    </div>
+                </article>
+                <article class="program-item">
+                    <button class="program-trigger" type="button" aria-expanded="false">
+                        <span>02</span>
+                        <strong>클래식 모음곡</strong>
+                    </button>
+                    <div class="program-panel">
+                        <p>현악, 목관, 금관이 서로 주고받는 구조를 중심으로 감상하면 좋습니다. 각 파트가 어떤 순간에 주선율을 맡는지 표시하는 팜플릿 영역입니다.</p>
+                        <a href="#logic">예매 로직 보기</a>
+                    </div>
+                </article>
+                <article class="program-item">
+                    <button class="program-trigger" type="button" aria-expanded="false">
+                        <span>03</span>
+                        <strong>영화음악 메들리</strong>
+                    </button>
+                    <div class="program-panel">
+                        <p>관객에게 익숙한 선율을 오케스트라 편곡으로 들려주는 무대입니다. 공연 당일에는 곡별 해설, 원곡 링크, 연주 순서를 이 영역에 넣을 수 있습니다.</p>
+                        <a href="https://www.sori21.co.kr/site/1/menu/79/content/56" target="_blank" rel="noreferrer">연지홀 좌석 안내</a>
+                    </div>
+                </article>
             </div>
-
-            <!-- 53기 명단 -->
-            <div class="member-layer" id="g53">
-              <div class="members-grid">
-                <div class="member-name-tag">고찬준</div>
-                <div class="member-name-tag">국은한</div>
-                <div class="member-name-tag">권희</div>
-                <div class="member-name-tag">김주연</div>
-                <div class="member-name-tag">김형래</div>
-                <div class="member-name-tag">배승준</div>
-                <div class="member-name-tag">송예린</div>
-                <div class="member-name-tag">신혜인</div>
-                <div class="member-name-tag">오민석</div>
-                <div class="member-name-tag">원희서</div>
-                <div class="member-name-tag">이윤성</div>
-                <div class="member-name-tag">전승현</div>
-                <div class="member-name-tag">황세연</div>
-              </div>
-            </div>
-
-            <!-- 54 & 55기 명단 -->
-            <div class="member-layer" id="g54-55">
-              <div class="members-grid">
-                <div class="member-name-tag">김서우</div>
-                <div class="member-name-tag">김유진</div>
-                <div class="member-name-tag">박예서</div>
-                <div class="member-name-tag">박하담</div>
-                <div class="member-name-tag">양성현</div>
-                <div class="member-name-tag">오리안</div>
-                <div class="member-name-tag">유기범</div>
-                <div class="member-name-tag">유동균</div>
-                <div class="member-name-tag">유재민</div>
-                <div class="member-name-tag">이우주</div>
-                <div class="member-name-tag">이현빈</div>
-                <div class="member-name-tag">정재민</div>
-                <div class="member-name-tag">최송이</div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- 악기 파트별 갤러리 레이아웃 -->
-          <div class="parts-gallery-container">
-            <h3 class="gallery-title font-serif">Instrument Parts Gallery</h3>
-            <div class="accent-line"></div>
-            
-            <div class="gallery-grid">
-              <!-- Violin 파트 -->
-              <div class="gallery-card">
-                <div class="card-inner-glow"></div>
-                <div class="gallery-img-wrap">
-                  <img src="images/violin_team.png" alt="바이올린 파트 단체사진" loading="lazy">
-                </div>
-                <div class="gallery-info">
-                  <h4 class="part-name font-serif">Violin 1st & 2nd</h4>
-                  <p class="part-desc">오케스트라의 화려하고 주도적인 선율을 이끄는 바이올린 파트</p>
-                </div>
-              </div>
-
-              <!-- Viola 파트 -->
-              <div class="gallery-card">
-                <div class="card-inner-glow"></div>
-                <div class="gallery-img-wrap">
-                  <img src="images/viola_team.png" alt="비올라 파트 단체사진" loading="lazy">
-                </div>
-                <div class="gallery-info">
-                  <h4 class="part-name font-serif">Viola</h4>
-                  <p class="part-desc">따뜻하고 깊이 있는 중음역으로 하모니를 채우는 비올라 파트</p>
-                </div>
-              </div>
-
-              <!-- Cello 파트 -->
-              <div class="gallery-card">
-                <div class="card-inner-glow"></div>
-                <div class="gallery-img-wrap">
-                  <img src="images/cello_team.png" alt="첼로 파트 단체사진" loading="lazy">
-                </div>
-                <div class="gallery-info">
-                  <h4 class="part-name font-serif">Cello</h4>
-                  <p class="part-desc">중후하고 감미로운 저음으로 선율을 뒷받침하는 첼로 파트</p>
-                </div>
-              </div>
-
-              <!-- Contrabass 파트 -->
-              <div class="gallery-card">
-                <div class="card-inner-glow"></div>
-                <div class="gallery-img-wrap">
-                  <img src="images/contrabass_team.png" alt="더블베이스 파트 단체사진" loading="lazy">
-                </div>
-                <div class="gallery-info">
-                  <h4 class="part-name font-serif">Contrabass</h4>
-                  <p class="part-desc">전체 사운드의 묵직한 기초와 기둥을 세우는 더블베이스 파트</p>
-                </div>
-              </div>
-
-              <!-- Woodwind / Brass 파트 -->
-              <div class="gallery-card">
-                <div class="card-inner-glow"></div>
-                <div class="gallery-img-wrap">
-                  <img src="images/woodwind_team.png" alt="목관악기 파트 단체사진" loading="lazy">
-                </div>
-                <div class="gallery-info">
-                  <h4 class="part-name font-serif">Flute / Oboe / Clarinet & Brass</h4>
-                  <p class="part-desc">다채로운 색채와 웅장한 호흡으로 곡에 생명을 불어넣는 관악 파트</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </section>
 
-
-        <!-- [SPONSORS] Section (동문후원 - 와이드 그리드) -->
-        <section id="sponsors" class="scroll-section">
-          <div class="section-header">
-            <span class="section-tag font-serif">SPONSORS</span>
-            <h2 class="section-title">동문 후원</h2>
-            <div class="accent-line"></div>
-          </div>
-
-          <div class="sponsors-list-wrapper">
-            <!-- 후원 병원 1 -->
-            <div class="hospital-card">
-              <div class="card-inner-glow"></div>
-              <div class="hospital-info">
-                <h4 class="hospital-name">홉킨스 전일내과의원</h4>
-                <p class="hospital-doctor">전기엽 선배님 (5기)</p>
-              </div>
-              <div class="hospital-links">
-                <a href="tel:063-278-7575" class="h-btn call"><i class="fa-solid fa-phone"></i> <span>전화 걸기</span></a>
-                <a href="https://m.map.naver.com/search2/search.naver?query=홉킨스전일내과의원" target="_blank" rel="noopener" class="h-btn map"><i class="fa-solid fa-location-dot"></i> <span>위치 보기</span></a>
-              </div>
+        <section id="account" class="site-section account-section">
+            <div class="section-title-row">
+                <div>
+                    <p class="section-kicker">My Ticket</p>
+                    <h2>내 티켓 로그인</h2>
+                </div>
             </div>
 
-            <!-- 후원 병원 2 -->
-            <div class="hospital-card">
-              <div class="card-inner-glow"></div>
-              <div class="hospital-info">
-                <h4 class="hospital-name">은헌정 정신건강의학과의원</h4>
-                <p class="hospital-doctor">은헌정 선배님 (6기)</p>
-              </div>
-              <div class="hospital-links">
-                <a href="tel:063-252-2200" class="h-btn call"><i class="fa-solid fa-phone"></i> <span>전화 걸기</span></a>
-                <a href="https://m.map.naver.com/search2/search.naver?query=은헌정정신건강의학과의원" target="_blank" rel="noopener" class="h-btn map"><i class="fa-solid fa-location-dot"></i> <span>위치 보기</span></a>
-              </div>
+            <div class="account-grid">
+                <article class="account-card">
+                    <h3>이름과 전화번호로 로그인</h3>
+                    <p>별도 비밀번호 없이 예매자 정보로 로그인하고, 같은 정보로 예매한 티켓을 조회합니다.</p>
+                    <form id="login-form" class="account-form">
+                        <label>
+                            이름
+                            <input id="login-name" type="text" placeholder="홍길동" autocomplete="name" required>
+                        </label>
+                        <label>
+                            전화번호
+                            <input id="login-phone" type="tel" placeholder="010-0000-0000" autocomplete="tel" required>
+                        </label>
+                        <button class="primary-button" type="submit">로그인 / 예매 조회</button>
+                    </form>
+                </article>
+
+                <article id="account-panel" class="account-card ticket-wallet-card">
+                    <div class="wallet-header">
+                        <div>
+                            <span>현재 계정</span>
+                            <h3 id="account-name">로그인 전</h3>
+                            <p id="account-phone">이름과 전화번호를 입력하면 예매 내역이 표시됩니다.</p>
+                        </div>
+                        <button id="logout-account" class="ghost-button" type="button">로그아웃</button>
+                    </div>
+                    <div id="ticket-wallet" class="ticket-wallet"></div>
+                </article>
             </div>
-
-            <!-- 후원 병원 3 -->
-            <div class="hospital-card">
-              <div class="card-inner-glow"></div>
-              <div class="hospital-info">
-                <h4 class="hospital-name">송호신 내과의원</h4>
-                <p class="hospital-doctor">송호신 선배님 (7기)</p>
-              </div>
-              <div class="hospital-links">
-                <a href="tel:063-224-8575" class="h-btn call"><i class="fa-solid fa-phone"></i> <span>전화 걸기</span></a>
-                <a href="https://m.map.naver.com/search2/search.naver?query=송호신내과의원" target="_blank" rel="noopener" class="h-btn map"><i class="fa-solid fa-location-dot"></i> <span>위치 보기</span></a>
-              </div>
-            </div>
-
-            <!-- 후원 병원 4 -->
-            <div class="hospital-card">
-              <div class="card-inner-glow"></div>
-              <div class="hospital-info">
-                <h4 class="hospital-name">엠마오 사랑병원</h4>
-                <p class="hospital-doctor">윤욱희 선배님 (7기)</p>
-              </div>
-              <div class="hospital-links">
-                <a href="tel:063-220-0691" class="h-btn call"><i class="fa-solid fa-phone"></i> <span>전화 걸기</span></a>
-                <a href="https://m.map.naver.com/search2/search.naver?query=엠마오사랑병원" target="_blank" rel="noopener" class="h-btn map"><i class="fa-solid fa-location-dot"></i> <span>위치 보기</span></a>
-              </div>
-            </div>
-          </div>
-
-          <!-- 디지털 방명록 (Feedback Loop) -->
-          <div class="guestbook-container">
-            <h3 class="gb-title">JBNUMS Concert 방명록</h3>
-            <p class="gb-desc">연주회를 빛내주신 관객 여러분의 따뜻한 응원의 한마디를 단원들에게 전해주세요.</p>
-            <button class="guestbook-btn" onclick="openGuestbookLink()">
-              단원들에게 응원 한마디 남기기 ✍️
-            </button>
-          </div>
-
-          <footer class="pdf-footer">
-            <p class="copyright">© 2026 JBNU Medicine Orchestra. All Rights Reserved.</p>
-          </footer>
         </section>
 
-      </main>
-
-      <!-- 실시간 한줄 기대평 위젯 (Bottom Left 고정 - wide-canvas 하위에 absolute 배치로 프레임 싱크) -->
-      <div id="review-widget" class="review-widget-container">
-        <div class="rw-header">
-          <span class="rw-title"><i class="fa-solid fa-comments"></i> 실시간 기대평</span>
-          <span class="rw-live-dot animate-pulse"></span>
-        </div>
-        <div id="rw-list" class="rw-list-area">
-          <!-- JS에서 동적으로 채워짐 -->
-        </div>
-        <form id="rw-form" class="rw-input-area" onsubmit="submitReview(event)">
-          <input type="text" id="rw-input" class="rw-text-input" placeholder="한줄평을 남겨주세요..." maxlength="30" required>
-          <button type="submit" class="rw-submit-btn">등록</button>
-        </form>
-      </div>
-
-      <!-- 슬라이드업 오디오 플레이어 드로어 (와이드 반응형 대응) -->
-      <div id="audio-drawer" class="audio-drawer-wrapper">
-        <div class="drawer-header">
-          <div class="bar-handle"></div>
-          <button class="drawer-close-btn" aria-label="Close Drawer"><i class="fa-solid fa-chevron-down"></i></button>
-        </div>
-        <div class="drawer-body">
-          <div class="vinyl-record-wrap">
-            <div class="vinyl-rim"></div>
-            <div class="vinyl-label-center">𝄞</div>
-          </div>
-          <div class="track-info">
-            <h4 id="drawer-track-title" class="track-title font-serif">Light Cavalry Overture</h4>
-            <span id="drawer-track-composer" class="track-composer font-serif">Franz von Suppé</span>
-          </div>
-          <div class="player-controls-wrap">
-            <div class="progress-container">
-              <input type="range" id="drawer-progress" class="drawer-progress-slider" value="0" min="0" max="100">
-              <div class="time-readout">
-                <span id="drawer-current-time">00:00</span>
-                <span id="drawer-duration">02:45</span>
-              </div>
+        <section id="logic" class="site-section muted-section logic-section">
+            <div class="section-title-row">
+                <div>
+                    <p class="section-kicker">Logic</p>
+                    <h2>좌석 상태와 예매 흐름</h2>
+                </div>
             </div>
-            <div class="button-row">
-              <button id="drawer-play-btn" class="drawer-play-btn"><i class="fa-solid fa-play"></i></button>
+
+            <div class="logic-grid">
+                <article class="logic-panel">
+                    <h3>블록별 잔여 좌석</h3>
+                    <div id="seat-status-grid" class="seat-status-grid"></div>
+                </article>
+                <article class="logic-panel">
+                    <h3>티켓팅 FSM</h3>
+                    <div class="fsm-flow" aria-label="예매 상태 흐름">
+                        <span class="fsm-node is-active" data-fsm="home">홈</span>
+                        <span class="fsm-node" data-fsm="login">로그인</span>
+                        <span class="fsm-node" data-fsm="block">블록 선택</span>
+                        <span class="fsm-node" data-fsm="seat">좌석 선택</span>
+                        <span class="fsm-node" data-fsm="info">정보 입력</span>
+                        <span class="fsm-node" data-fsm="complete">예매 완료</span>
+                        <span class="fsm-node" data-fsm="wallet">내 티켓</span>
+                    </div>
+                </article>
             </div>
-          </div>
-        </div>
-      </div>
+        </section>
 
-    </div>
-  </div>
+        <section id="admin" class="site-section admin-section">
+            <div class="section-title-row">
+                <div>
+                    <p class="section-kicker">Admin</p>
+                    <h2>관리자 모드</h2>
+                </div>
+            </div>
 
-  <!-- 글로벌 단원 소감 툴팁 상자 (쌓임 맥락 충돌 철벽 회피용) -->
-  <div id="global-tooltip" class="global-tooltip-box">소감 한마디</div>
+            <div class="admin-grid">
+                <article class="admin-card">
+                    <h3>관리자 로그인</h3>
+                    <p>Firebase 관리자 계정으로 전체 예매 목록과 좌석별 취소를 관리합니다.</p>
+                    <p id="db-status" class="db-status">DB 상태 확인 중</p>
+                    <p id="admin-auth-status" class="admin-auth-status">관리자 로그인 전</p>
+                    <form id="admin-form" class="account-form">
+                        <label>
+                            관리자 이메일
+                            <input id="admin-email" type="email" placeholder="admin@example.com" autocomplete="username" required>
+                        </label>
+                        <label>
+                            비밀번호
+                            <input id="admin-password" type="password" placeholder="비밀번호" autocomplete="current-password" required>
+                        </label>
+                        <button class="primary-button" type="submit">관리자 로그인</button>
+                    </form>
+                </article>
 
-  <script src="app.js?v=2.0"></script>
+                <article id="admin-panel" class="admin-card is-hidden">
+                    <div class="wallet-header">
+                        <div>
+                            <span>예약 관리</span>
+                            <h3>전체 예매 목록</h3>
+                            <p>관리자 권한이 있는 계정에서만 이름, 전화번호, 좌석 정보가 표시됩니다.</p>
+                        </div>
+                        <button id="admin-logout" class="ghost-button" type="button">관리자 닫기</button>
+                    </div>
+                    <div class="admin-tools">
+                        <label>
+                            예매 검색
+                            <input id="admin-search" type="search" placeholder="이름, 전화번호, 좌석, 예매번호">
+                        </label>
+                        <button id="admin-refresh" class="outline-button" type="button">새로고침</button>
+                    </div>
+                    <div id="admin-bookings" class="admin-bookings"></div>
+                </article>
+            </div>
+        </section>
+
+        <section id="ticketing" class="site-section ticket-section">
+            <div class="ticket-gateway">
+                <div>
+                    <p class="section-kicker">Ticket</p>
+                    <h2>연지홀 좌석 예매</h2>
+                    <p>가블록, 나블록, 다블록 중 하나를 고른 뒤 확대된 좌석표에서 원하는 좌석을 선택합니다. 예매 금액은 무료입니다.</p>
+                </div>
+                <button class="primary-button gateway-button" type="button" data-open-ticket>예매 화면 열기</button>
+            </div>
+
+            <div id="ticket-app" class="ticket-app is-hidden">
+                <div class="page-shell ticket-shell">
+                    <header class="top-bar">
+                        <div>
+                            <p class="eyebrow">HEXA Ticket</p>
+                            <h2>연지홀 티켓 예매</h2>
+                        </div>
+                        <button id="reset-demo" class="ghost-button" type="button">예매 초기화</button>
+                    </header>
+
+                    <nav class="steps" aria-label="예매 단계">
+                        <button class="step is-active" data-step="1" type="button">1 좌석 선택</button>
+                        <button class="step" data-step="2" type="button" disabled>2 정보 입력</button>
+                        <button class="step" data-step="3" type="button" disabled>3 예매 완료</button>
+                    </nav>
+
+                    <section id="step-seat" class="screen is-active">
+                        <div class="seat-layout">
+                            <aside class="control-card">
+                                <div class="section-heading compact">
+                                    <span>좌석 선택</span>
+                                    <h2>원하는 좌석을 선택하세요</h2>
+                                </div>
+
+                                <div class="filter-row">
+                                    <button class="filter is-active" data-floor="all" type="button">전체</button>
+                                    <button class="filter" data-floor="1F" type="button">1층</button>
+                                    <button class="filter" data-floor="2F" type="button">2층</button>
+                                </div>
+
+                                <p id="block-helper" class="block-helper">블록을 먼저 선택한 뒤 한 좌석만 선택할 수 있습니다.</p>
+                                <button id="back-blocks" class="ghost-button full is-hidden" type="button">블록 전체 보기</button>
+
+                                <div class="legend">
+                                    <span><i class="legend-dot available"></i>선택 가능</span>
+                                    <span><i class="legend-dot selected"></i>선택 좌석</span>
+                                    <span><i class="legend-dot reserved"></i>예매 완료</span>
+                                </div>
+                            </aside>
+
+                            <article class="seat-card">
+                                <div class="stage">무대</div>
+                                <div id="seat-map" class="seat-map"></div>
+                            </article>
+
+                            <aside class="summary-card sticky">
+                                <h2>선택 내역</h2>
+                                <div id="summary-seat" class="summary-list"></div>
+                                <button id="go-info" class="primary-button" type="button" disabled>예매 정보 입력</button>
+                            </aside>
+                        </div>
+                    </section>
+
+                    <section id="step-info" class="screen">
+                        <div class="content-grid">
+                            <article class="main-card">
+                                <div class="section-heading">
+                                    <span>예매자 정보</span>
+                                    <h2>입장 확인에 사용할 정보를 입력하세요</h2>
+                                </div>
+                                <p id="current-account-note" class="account-note">로그인하면 이 정보로 내 티켓 보관함에 저장됩니다.</p>
+
+                                <form id="booking-form" class="booking-form simple">
+                                    <label>
+                                        이름
+                                        <input id="buyer-name" type="text" placeholder="홍길동" autocomplete="name" required>
+                                    </label>
+                                    <label>
+                                        전화번호
+                                        <input id="buyer-phone" type="tel" placeholder="010-0000-0000" autocomplete="tel" required>
+                                    </label>
+                                    <label class="agree-row">
+                                        <input id="agree-check" type="checkbox">
+                                        선택한 좌석 예매 내용을 확인했습니다.
+                                    </label>
+                                </form>
+                            </article>
+
+                            <aside class="summary-card">
+                                <h2>예매 확인</h2>
+                                <p id="confirm-message" class="confirm-message"></p>
+                                <div id="summary-payment" class="summary-list"></div>
+                                <button id="back-seat" class="ghost-button full" type="button">좌석 다시 선택</button>
+                                <button id="complete-booking" class="primary-button" type="button" onclick="completeBooking(event)">예매 완료하기</button>
+                            </aside>
+                        </div>
+                    </section>
+
+                    <section id="step-complete" class="screen">
+                        <article class="complete-card">
+                            <span class="complete-mark">완료</span>
+                            <h2 id="complete-title">예매가 완료되었습니다</h2>
+                            <p>예매번호와 좌석 정보를 확인해 주세요.</p>
+                            <div id="complete-detail" class="receipt"></div>
+                            <div class="complete-actions">
+                                <button id="save-complete-ticket" class="primary-button narrow" type="button" disabled>디지털 티켓 이미지 저장</button>
+                                <a class="ghost-link" href="#account" id="view-wallet">내 티켓 보기</a>
+                                <button id="new-booking" class="ghost-button narrow" type="button">새 예매하기</button>
+                            </div>
+                        </article>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <strong>HEXA Orchestra</strong>
+        <span>공연 정보와 티켓 예매를 위한 관현악단 웹사이트 시안</span>
+    </footer>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="firebase-config.js?v=4"></script>
+    <script src="app.js?v=21"></script>
 </body>
 </html>
